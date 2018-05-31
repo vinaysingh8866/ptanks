@@ -19,4 +19,4 @@ Up and down arrows will rotate the Turret.
 'A' and 'D' will adjust the power.
 Press 'W' to change your weapon.
 Press 'P' to pause the game.
-Press 'R' to restart the game
+Press 'R' to restart the game.
