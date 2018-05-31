@@ -1,0 +1,70 @@
+body,html{
+		background: #222930;
+		color:#4EB1BA;
+		font-family: 'Gloria Hallelujah';
+		width: 99vw;
+	
+}
+
+@keyframes shrink {
+  0% {
+    font-size: .8em;
+  }
+  100% {
+    font-size: 1.3em;
+  }
+}
+
+
+h1{	margin: 0 auto;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: 0px 3px 3px 0px #C7C7C7 inset;
+	background: none repeat scroll 0 0 #E9E9E9;
+	padding: 5px;
+	width: 15vw;
+	font-size: 2em;
+	font-family: 'Gloria Hallelujah';
+	text-shadow: 2px 1px #00e9ff;
+
+	}
+
+footer{
+	box-sizing: border-box;
+	text-align: center;
+	height:50px;
+	/*background: #000000;*/
+	border-radius: 5px;
+	font-size: 1.2em;
+	background: none repeat scroll 0 0 #E9E9E9;
+	box-shadow: 0px 3px 3px 0px #C7C7C7 inset;
+}
+
+#heart{
+	animation: shrink 1s infinite alternate;
+}
+
+canvas{
+	display: block;
+	background: #E9E9E9;
+	margin: 5px auto;
+	border-radius: 10px;
+	min-width: 1200;
+	min-height: 560;
+	background: url("assets/img/canvasbg.jpg");
+	background-size: cover;
+}
+
+canvas:focus{
+	border:none;
+}
+
+#link{
+	text-decoration: none;
+}
+
+#link:hover{
+	
+	text-decoration: none;
+	color:red;
+}
