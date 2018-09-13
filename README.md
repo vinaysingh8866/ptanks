@@ -20,3 +20,25 @@ Pocket Tanks clone
 5. Press 'W' to change your weapon.
 6. Press 'P' to pause the game.
 7. Press 'R' to restart the game.
+
+-------------------
+
+## Click here to play: [link](http://htmlpreview.github.io/?https://github.com/shakeabi/ptanks/blob/master/index.html)
+
+### or
+
+## Installation
+
+1. Clone/download the repo
+2. Navigate to the repo folder.
+3. Click on index.html
+
+
+--------------
+
+## Built With
+
+* [HTML](https://www.w3.org/html/)
+* [CSS](https://www.w3.org/Style/CSS/)
+* [Vanilla JS](http://vanilla-js.com/)
+* [Canvas API](https://developer.mozilla.org/kab/docs/Web/API/Canvas_API)
