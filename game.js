@@ -227,13 +227,61 @@ function tank(start){
 }
 ////////////////////////////////////////////////////////////////////////////////////
    
-
+let player;
+let disabled;
+const newSocket = io('http://localhost:3000')
+newSocket.on('gamePlayer', (message)=>{
+    if(message==1){
+        player=1
+        curPlayer= tank1;
+    }if(message==2){
+        player=2
+        curPlayer= tank2;
+        disabled = true;
+    }
+    
+    //console.log(curPlayer)
+})
+newSocket.on('playerMove', (message)=>{
+    if(player==2){
+        if(message==32){
+            launch(tank1)
+        }
+        if(message==39){
+            console.log("move")
+            console.log(tank1)
+            moveTank(tank1, 5);
+            console.log(tank1)
+        }
+        if(message==37){
+            moveTank(tank1, -5);
+        }
+        
+    }
+    if(player==1){
+        if(message==32){
+            launch(tank2)
+        }
+        if(message==39){
+            moveTank(tank2, 5);
+            
+        }
+        if(message==37){
+            moveTank(tank2, -5);
+        }
+    }
+    console.log(message)
+    
+})
+function start(){
+    newSocket.emit("gameStart")
+}
 
 
 document.addEventListener('keydown', function(event) {
-    if(gameStarted == true){
+    if(gameStarted == true && !disabled){
        
-
+        newSocket.emit("keyPressed", event.keyCode)
         ctx.restore();
         ctx.clearRect(0, 0, width, height);
         drawTerrain();
@@ -545,14 +593,15 @@ function launch(){
        
         if(clear==true){
             clearInterval(ani);
-            if(curPlayer.getplayer()==1){
-                curPlayer = tank2;
-                otherPlayer = tank1;
-            }
-            else{
-                curPlayer = tank1;
-                otherPlayer = tank2; 
-            }
+            // if(curPlayer.getplayer()==1){
+            //     curPlayer = tank2;
+            //     otherPlayer = tank1;
+            // }
+            // else{
+            //     curPlayer = tank1;
+            //     otherPlayer = tank2; 
+            // }
+            //disabled = true
             gamePlay=true;
              ++rally;
             if(rally%2==0 && rally!=0)++volley;

@@ -1,0 +1,25 @@
+{
+  "name": "ptanks",
+  "version": "1.0.0",
+  "description": "Pocket Tanks clone",
+  "main": "game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shakeabi/ptanks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shakeabi/ptanks/issues"
+  },
+  "homepage": "https://github.com/shakeabi/ptanks#readme",
+  "dependencies": {
+    "express": "^4.18.0",
+    "socket.io": "^4.5.0"
+  }
+}
